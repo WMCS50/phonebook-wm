@@ -20,6 +20,9 @@ jobs:
       - name: Check style
         run: npm run lint
 
+      - name: Set up Powershell
+        run: actions/setup-powershell@v1
+        
       - name: Build
         run: npm run build:ui
       
