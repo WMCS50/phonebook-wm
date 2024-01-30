@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd frontend && npm run build && @powershell Copy-Item dist -Recurse ../",
     "deploy": "fly deploy",
-    "deploy:full": "npm run build:ui && npm run deploy",    
+    "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "fly logs",
     "lint": "eslint .",
     "start:test": "node index.js",
@@ -26,7 +26,9 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.0",
+    "cypress": "^13.6.3",
     "eslint": "^8.56.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "nodemon": "^3.0.3"
   }
 }
