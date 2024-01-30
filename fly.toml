@@ -10,7 +10,10 @@ primary_region = "sea"
 
 [env]
   PORT = "3000"
-  
+
+[processes]
+  app = "node app.js"
+
 [http_service]
   internal_port = 3000
   force_https = true
