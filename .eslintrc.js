@@ -25,6 +25,9 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 'latest'
   },
+  'plugins': [
+    'cypress'
+  ],
   'rules': {
     'eqeqeq': 'error',
     'no-trailing-spaces': 'error',
