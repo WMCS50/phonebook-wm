@@ -12,7 +12,7 @@
     "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "fly logs",
     "lint": "eslint .",
-    "start-prod": "cd ./frontend && npm start",
+    "start-prod": "cd ./frontend && npm run dev",
     "start:test": "node index.js",
     "test:e2e": "cd ./frontend && npm run test:e2e"
   },
