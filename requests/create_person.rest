@@ -1,0 +1,68 @@
+//GetAll
+GET http://localhost:3001/api/persons
+
+###
+//Get specific ID
+GET http://localhost:3001/api/persons/6511e57b9b5b01d329baca42
+
+###
+//Get incorrect specific ID
+GET http://localhost:3001/api/persons/6511e57b9b5b01d329baca43
+
+###
+//Get invalid ID
+GET http://localhost:3001/api/persons/someInvalidId
+
+###
+//Get info
+GET http://localhost:3001/info
+
+
+###
+//name and number provided
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Joe Schmo",
+    "number": 297
+}
+
+###
+//name missing
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "number": 297
+}
+
+###
+//name too short
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Me",
+    "number": 678
+}
+
+###
+//number format incorrect
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Mdme ppp",
+    "number": "124-56-789"
+}
+
+###
+//number format ok
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Mdme ppp",
+    "number": "124-56789"
+}

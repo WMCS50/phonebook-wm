@@ -1,0 +1,10 @@
+//delete a request that exists
+DELETE http://localhost:3001/api/persons/6515de4e44fe7a1e0b120e72
+
+###
+//delete a request that doesn't exist
+DELETE http://localhost:3001/api/persons/6515de4e44fe7a1e0b120e71
+
+###
+//another delete test
+DELETE http://localhost:3001/api/persons/65b80562fb6bcf441a8d5576
